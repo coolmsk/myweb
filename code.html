@@ -31,7 +31,7 @@
     <script>
         function checkStatus() {
             // 1. 사용자가 입력한 사업자 번호를 가져옵니다.
-            const businessNumber = document.getElementById('business-number').value;
+            const businessNumber = document.getElementById('business-number').value.replace(/-/g, '');
 
             // 2. 정부 서버에 요청을 보낼 주소와 내 API 키를 준비합니다.
             //    decode가 된 일반 인증키를 사용해야 합니다.
@@ -85,4 +85,5 @@
     </script>
 
 </body>
+
 </html>
